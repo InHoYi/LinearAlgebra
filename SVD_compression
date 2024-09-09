@@ -48,7 +48,7 @@ def reconstruct_image(U, S, Vt, k):
 compressed_red = reconstruct_image(R_U, R_S, R_Vt, red_k)
 compressed_green = reconstruct_image(G_U, G_S, G_Vt, green_k)
 compressed_blue = reconstruct_image(B_U, B_S, B_Vt, blue_k)
-compressed_image = np.stack((reconstructed_red, reconstructed_green, reconstructed_blue), axis=-1)
+compressed_image = np.stack((compressed_red, compressed_green, compressed_blue), axis=-1)
 
 plt.figure(figsize=(8, 8))
 plt.imshow(compressed_image)
